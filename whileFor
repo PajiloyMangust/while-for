@@ -1,0 +1,43 @@
+public class test {
+
+    public static void main(String[] args) {
+
+        Integer num = 11;
+        int[] fibocacci_arr = new int[num];
+
+        System.out.println("\n|___FOR___|");
+        System.out.print("Ряд Фибоначчи из " + num + " чисел: ");
+
+        for( int i = 0; i < num; i++ ){
+            if (i < 2){
+                fibocacci_arr[i] = 1;
+            }else {
+                fibocacci_arr[i] = fibocacci_arr[i-1] + fibocacci_arr[i-2];
+            }
+            if (i == num - 1){
+                System.out.print(fibocacci_arr[i] +".");
+            } else {
+                System.out.print(fibocacci_arr[i] + ", ");
+            }
+        }
+
+        Integer iter = 0;
+
+        System.out.println("\n|___WHILE___|");
+        System.out.print("Ряд Фибоначчи из " + num + " чисел: ");
+
+        while (iter < num) {
+            if (iter < 2){
+                fibocacci_arr[iter] = 1;
+            }else {
+                fibocacci_arr[iter] = fibocacci_arr[iter-1] + fibocacci_arr[iter-2];
+            }
+            if (iter == num - 1){
+                System.out.print(fibocacci_arr[iter] +".");
+            } else {
+                System.out.print(fibocacci_arr[iter] + ", ");
+            }
+            iter ++;
+        }
+    }
+}
